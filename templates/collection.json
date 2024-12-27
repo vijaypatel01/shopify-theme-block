@@ -25,7 +25,7 @@
           "settings": {
             "width": "",
             "enable_filtering": true,
-            "filter_type": "vertical",
+            "filter_type": "horizontal",
             "enable_sorting": true
           }
         },
@@ -33,7 +33,7 @@
           "type": "collection-product-grid",
           "settings": {
             "width": "100%",
-            "filter_type": "vertical",
+            "filter_type": "horizontal",
             "image_ratio": "adapt",
             "image_shape": "default",
             "show_secondary_image": false,
@@ -54,7 +54,7 @@
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "enable_filtering": true,
-        "filter_type": "vertical",
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "padding_top": 36,
         "padding_bottom": 36
