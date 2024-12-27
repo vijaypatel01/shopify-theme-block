@@ -3589,7 +3589,10 @@ details-disclosure > details {
 .progress-bar .progress-bar-value {
   display: block;
 }
-
+ul{
+  list-style:none;
+  padding:0;
+}
 @keyframes indeterminateAnimation {
   0% {
     transform: translateX(-20%) scaleX(0);
