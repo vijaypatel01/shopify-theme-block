@@ -1,6 +1,7 @@
 <style>
   #shopify-block-{{ block.id }}{
     width:{{ block.settings.width }};
+    height:{{ block.settings.height }};
   }
     @media (max-width:576px){
       #shopify-block-{{ block.id }}{
@@ -19,6 +20,11 @@
         "type": "text",
         "id": "width",
         "label": "Width"
+      },
+      {
+        "type": "text",
+        "id": "height",
+        "label": "Height"
       },
       {
         "type": "header",
