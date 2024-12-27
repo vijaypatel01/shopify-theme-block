@@ -1,0 +1,137 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    width:{{ block.settings.width }};
+  }
+   @media (max-width:576px){
+    #shopify-block-{{ block.id }}{
+    width:{{ block.settings.mobile-width }};
+  } 
+</style>
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+{% unless product.has_only_default_variant %}
+    {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+    {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
+    {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+  {% endunless %}
+  {%- if product.quantity_price_breaks_configured? -%}
+    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
+{% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+<div class="product product--{{ block.settings.media_size }} product--{{ block.settings.media_position }} product--{{ block.settings.gallery_layout }} product--mobile-{{ block.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div class="grid__item product__media-wrapper">
+    {% render 'product-media-gallery', variant_images: variant_images %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Product Thumbnail",
+    "settings": [
+      {
+        "type": "text",
+        "id": "width",
+        "label": "Width"
+      },
+      {
+        "type": "select",
+        "id": "media_size",
+        "options": [
+          {
+            "value": "small",
+            "label": "t:sections.main-product.settings.media_size.options__1.label"
+          },
+          {
+            "value": "medium",
+            "label": "t:sections.main-product.settings.media_size.options__2.label"
+          },
+          {
+            "value": "large",
+            "label": "t:sections.main-product.settings.media_size.options__3.label"
+          }
+        ],
+        "default": "large",
+        "label": "t:sections.main-product.settings.media_size.label",
+        "info": "t:sections.main-product.settings.media_size.info"
+      },
+      {
+        "type": "select",
+        "id": "media_position",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.main-product.settings.media_position.options__1.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.main-product.settings.media_position.options__2.label"
+          }
+        ],
+        "default": "left",
+        "label": "t:sections.main-product.settings.media_position.label",
+        "info": "t:sections.main-product.settings.media_position.info"
+      },
+      {
+        "type": "select",
+        "id": "gallery_layout",
+        "options": [
+          {
+            "value": "stacked",
+            "label": "t:sections.main-product.settings.gallery_layout.options__1.label"
+          },
+          {
+            "value": "columns",
+            "label": "t:sections.main-product.settings.gallery_layout.options__2.label"
+          },
+          {
+            "value": "thumbnail",
+            "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
+          },
+          {
+            "value": "thumbnail_slider",
+            "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
+          }
+        ],
+        "default": "stacked",
+        "label": "t:sections.main-product.settings.gallery_layout.label"
+      },
+      {
+        "type": "select",
+        "id": "mobile_thumbnails",
+        "options": [
+          {
+            "value": "columns",
+            "label": "t:sections.main-product.settings.mobile_thumbnails.options__1.label"
+          },
+          {
+            "value": "show",
+            "label": "t:sections.main-product.settings.mobile_thumbnails.options__2.label"
+          },
+          {
+            "value": "hide",
+            "label": "t:sections.main-product.settings.mobile_thumbnails.options__3.label"
+          }
+        ],
+        "default": "hide",
+        "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Style"
+      },
+      {
+        "type": "text",
+        "id": "mobile-width",
+        "label": "Width"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Thumbnail"
+      }
+    ]
+  }
+{% endschema %}

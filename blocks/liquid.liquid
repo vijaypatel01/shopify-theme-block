@@ -1,0 +1,142 @@
+<style>
+   #shopify-block-{{ block.id }}{
+    font-family:"{{ block.settings.font-style.family }}",sans-serif;
+    font-size:{{ block.settings.font_size }}px;
+    font-weight:{{ block.settings.font_weight }};
+    line-height:{{ block.settings.line-height }}px;
+    color:{{ block.settings.color }};
+    padding:{{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom}}px;
+    margin:{{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom}}px;
+  }
+  #shopify-block-{{ block.id }} a{
+    font-family:"{{ block.settings.font-style.family }}",sans-serif;
+    font-size:{{ block.settings.font_size }}px;
+    font-weight:{{ block.settings.font_weight }};
+    line-height:{{ block.settings.line-height }}px;
+    color:{{ block.settings.color }};
+    margin-right:5px;
+    text-decoration:none;
+  }
+</style>
+{{ block.settings.liquid }}
+{% schema %}
+  {
+    "name": "Liquid",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "liquid",
+        "label": "Liquid"
+      },
+      {
+        "type": "font_picker",
+        "id": "font-style",
+        "label": "Font Style",
+        "default": "montserrat_n5"
+      },
+      {
+        "type": "range",
+        "id": "font_size",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size",
+        "default": 16
+      },
+      {
+        "type": "select",
+        "id": "font_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "300"
+      },
+      {
+        "type": "text",
+        "id": "line-height",
+        "label": "Line Height",
+        "default":"19.5"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color",
+        "default":"#000"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Liquid"
+      }
+    ]
+  }
+{% endschema %}

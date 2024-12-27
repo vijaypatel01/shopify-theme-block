@@ -1,0 +1,50 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    width:{{ block.settings.width }};
+  }
+    @media (max-width:576px){
+      #shopify-block-{{ block.id }}{
+      width:{{ block.settings.mobile-width }}%;
+      height:{{ block.settings.mobile-height }};
+    } 
+  }
+</style>
+{% content_for 'blocks' %}
+{% schema %}
+  {
+    "name": "Image Block",
+    "class": "image-block",
+    "settings": [
+      {
+        "type": "text",
+        "id": "width",
+        "label": "Width"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Style"
+      },
+      {
+        "type": "range",
+        "id": "mobile-width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Width",
+        "default": 100
+      },
+      {
+        "type": "text",
+        "id": "mobile-height",
+        "label": "Height"
+      }
+    ],
+    "blocks": [{"type": "image"},{"type": "collection-image"}],
+    "presets": [
+      {
+        "name": "Image Block"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,86 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    {% if block.settings.border == 'all' %}
+      border-style: solid;
+    {% else %}
+      border-{{ block.settings.border }}:solid;
+    {% endif %}
+    border-width:{{ block.settings.border_width }}px;
+    border-color:{{ block.settings.border-color }};
+    background:{{ block.settings.bg_color }};
+    {% if block.settings.bg_image != blank %}
+      background:url('{{ block.settings.bg_image | image_url }}');
+      background-size: cover;
+      background-position:center;
+    {% endif %}
+  }
+</style>
+<div class="page-width">
+  {% content_for 'blocks' %}
+</div>
+{% schema %}
+  {
+    "name": "Container",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "range",
+        "id": "border_width",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Border Width",
+        "default": 0
+      },
+      {
+        "type": "color",
+        "id": "border-color",
+        "label": "Border Color"
+      },
+      {
+        "type": "select",
+        "id": "border",
+        "label": "Border",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "all",
+            "label": "All"
+          }
+        ],
+        "default": "all"
+      }
+    ],
+    "blocks": [{"type": "@theme"}],
+    "presets": [
+      {
+        "name": "Container"
+      }
+    ]
+  }
+{% endschema %}

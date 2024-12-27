@@ -1,0 +1,95 @@
+<ul
+  class="collection-list contains-card contains-card--collection grid grid--{{ block.settings.columns_desktop }}-col-desktop grid--{{ block.settings.columns_mobile }}-col-tablet-down collection-list--{{ block.blocks.size }}-items"
+  id="Slider-{{ block.id }}"
+  role="list"
+>
+   {%- liquid
+      assign columns = block.blocks.size
+      if columns > 3
+        assign columns = 3
+      endif
+    -%}
+  {% for collection in block.settings.collection %}
+    <li
+      id="Slide-{{ block.id }}-{{ forloop.index }}"
+      class="collection-list__item grid__item{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {{ block.shopify_attributes }}
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        style="--animation-order: {{ forloop.index }};"
+      {% endif %}
+    >
+      {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+      {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+      {% render 'card-collection',
+        card_collection: collection,
+        media_aspect_ratio: block.settings.image_ratio,
+        columns: columns,
+        placeholder_image: placeholder_image
+      %}
+    </li>
+  {% endfor %}
+</ul>
+{% schema %}
+  {
+    "name": "Collection List",
+    "settings": [
+      {
+        "type": "collection_list",
+        "id": "collection",
+        "label": "Collection List"
+      },
+      {
+        "type": "select",
+        "id": "image_ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "t:sections.collection-list.settings.image_ratio.options__1.label"
+          },
+          {
+            "value": "portrait",
+            "label": "t:sections.collection-list.settings.image_ratio.options__2.label"
+          },
+          {
+            "value": "square",
+            "label": "t:sections.collection-list.settings.image_ratio.options__3.label"
+          }
+        ],
+        "default": "square",
+        "label": "t:sections.collection-list.settings.image_ratio.label",
+        "info": "t:sections.collection-list.settings.image_ratio.info"
+      },
+      {
+        "type": "range",
+        "id": "columns_desktop",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3,
+        "label": "t:sections.collection-list.settings.columns_desktop.label"
+      },
+      {
+        "type": "select",
+        "id": "columns_mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "t:sections.collection-list.settings.columns_mobile.options__1.label"
+          },
+          {
+            "value": "2",
+            "label": "t:sections.collection-list.settings.columns_mobile.options__2.label"
+          }
+        ],
+        "default": "1",
+        "label": "t:sections.collection-list.settings.columns_mobile.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection List"
+      }
+    ]
+  }
+{% endschema %}

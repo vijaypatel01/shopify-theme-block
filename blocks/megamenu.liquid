@@ -1,0 +1,386 @@
+{{ 'header-megamenu.css' | asset_url | stylesheet_tag }}
+<ul class="header-megamenu">
+  {%- for link in block.settings.main_linklist.links -%}
+    {% unless forloop.last %}
+      <li>
+      {%- if link.links != blank -%}
+        <header-menu>
+          <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+            <summary
+              id="HeaderMenu-{{ link.handle }}"
+              class="header__menu-item list-menu__item link focus-inset"
+            >
+              <span
+                {%- if link.child_active %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                {{- link.title | escape -}}
+              </span>
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </summary>
+            <div
+              id="MegaMenu-Content-{{ forloop.index }}"
+              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+              tabindex="-1"
+            >
+              <ul
+                class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %} mega-menu-list-{{ forloop.index }}"
+                role="list"
+              >
+                {%- for childlink in link.links -%}
+                  {% assign childlink_title = childlink.title | split: '|' %}
+                  <li class="childlink-link{% if forloop.index == 1 %} hover{% endif %}">
+                    <h3
+                      id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                      {% if childlink.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {% if childlink.title contains '|' %}
+                        {{ childlink_title[0] | escape }}
+                      {% else %}
+                        {{ childlink.title | escape }}
+                      {% endif %}
+                      {{- 'icon-right-angle.svg' | inline_asset_content -}}
+                    </h3>
+                    {%- if childlink.links != blank -%}
+                      <div class="list-unstyled childlink-list" role="list">
+                        <div class="product_block-without-link">
+                          <h3>
+                            {% if childlink.title contains '|' %}
+                              {{ childlink_title[1] | escape }}
+                            {% else %}
+                              {{ childlink.title | escape }}
+                            {% endif %}
+                          </h3>
+                          <div class="childlink-product-blog">
+                            {% assign counter = 0 %}
+                              <ul>
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% unless grandchildlink.title contains 'View All' %}
+                                    {%- if counter < 5 and grandchildlink.type != 'product_link' and grandchildlink.type != 'article_link' -%}
+                                      <li class="grandchildlink-list">
+                                        <a
+                                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                          href="{{ grandchildlink.url }}"
+                                          class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                          {% if grandchildlink.current %}
+                                            aria-current="page"
+                                          {% endif %}
+                                        >
+                                          {{ grandchildlink.title | escape }}
+                                        </a>
+                                      </li>
+                                      {% assign counter = counter | plus: 1 %}
+                                    {%- endif -%}
+                                  {% endunless %}
+                                {%- endfor -%}
+                              </ul>
+                              <ul>
+                                {%- assign counter = 0 -%}
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% unless grandchildlink.title contains 'View All' %}
+                                    {%- if counter >= 5 and grandchildlink.type != 'product_link' and grandchildlink.type != 'article_link'-%}
+                                    <li class="grandchildlink-list">
+                                      <a
+                                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                        href="{{ grandchildlink.url }}"
+                                        class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                        {% if grandchildlink.current %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endif -%}
+                                  {% assign counter = counter | plus: 1 %}
+                                  {% endunless %}
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                            <ul class="view-all-grandchild">
+                              {%- assign counter = 0 -%}
+                              {%- for grandchildlink in childlink.links -%}
+                                {% if grandchildlink.title contains 'View All' %}
+                                  <li class="grandchildlink-list">
+                                    <a
+                                      id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                      href="{{ grandchildlink.url }}"
+                                      class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{- 'icon-view-all.svg' | inline_asset_content -}}{{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {% endif %}
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                          <ul class="product_blog-link">
+                            {%- for grandchildlink in childlink.links -%}
+                              {%- if grandchildlink.type == 'product_link' -%}
+                                <li class="grandchildlink-list product_link">
+                                  {%- assign product = grandchildlink.object -%}
+                                  <div class="image-block">
+                                    <img src="{{ product.featured_image | image_url }}">
+                                  </div>
+                                  <h3><a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a></h3>
+                                  <div class="price-and-rating">
+                                    {{ product.price | money }}
+                                  </div>
+                                  <a href="{{ product.url }}" class="view-product-button">View Product</a>
+                                </li>
+                              {% endif %}
+                              {%- if grandchildlink.type == 'article_link' -%}
+                                <li class="grandchildlink-list article-link">
+                                  {%- assign article = grandchildlink.object -%}
+                                  <div class="image-block">
+                                    <img src="{{ article.image | image_url }}">
+                                  </div>
+                                  <h3><a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a></h3>
+                                  <p>{{ article.content | truncate : 210 }}</p>
+                                  <a href="{{ article.url }}" class="read-blog">Read Blog Article →</a>
+                                </li>
+                              {% endif %}
+                            {%- endfor -%}
+                          </ul>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </details>
+        </header-menu>
+      {%- else -%}
+        <a
+          id="HeaderMenu-{{ link.handle }}"
+          href="{{ link.url }}"
+          class="header__menu-item list-menu__item link link--text focus-inset"
+          {% if link.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span
+            {%- if link.current %}
+              class="header__active-menu-item"
+            {% endif %}
+          >
+            {{- link.title | escape -}}
+          </span>
+        </a>
+      {%- endif -%}
+    </li>
+    {% else %}
+      <li class="last-menu-list">
+      {%- if link.links != blank -%}
+        <header-menu>
+          <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+            <summary
+              id="HeaderMenu-{{ link.handle }}"
+              class="header__menu-item list-menu__item link focus-inset"
+            >
+              <span
+                {%- if link.child_active %}
+                  class="header__active-menu-item"
+                {% endif %}
+              >
+                {{- link.title | escape -}}
+              </span>
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </summary>
+            <div
+              id="MegaMenu-Content-{{ forloop.index }}"
+              class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+              tabindex="-1"
+            >
+              <ul
+                class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %} mega-menu-list-{{ forloop.index }}"
+                role="list"
+              >
+                {%- for childlink in link.links -%}
+                  <li class="childlink-link{% if forloop.index == 1 %} hover{% endif %}">
+                    <h3
+                      id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                      class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                      {% if childlink.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {% if childlink.title contains '|' %}
+                        {{ childlink_title[0] | escape }}
+                      {% else %}
+                        {{ childlink.title | escape }}
+                      {% endif %}{{- 'icon-right-angle.svg' | inline_asset_content -}}
+                    </h3>
+                    {%- if childlink.links != blank -%}
+                      <div class="list-unstyled childlink-list" role="list">
+                        <div class="product_block-without-link">
+                          <h3>
+                            {% if childlink.title contains '|' %}
+                              {{ childlink_title[1] | escape }}
+                            {% else %}
+                              {{ childlink.title | escape }}
+                            {% endif %}
+                          </h3>
+                          <div class="childlink-product-blog">
+                            {% assign counter = 0 %}
+                              <ul>
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% unless grandchildlink.title contains 'View All' %}
+                                    {%- if counter < 6 -%}
+                                      <li class="grandchildlink-list">
+                                        <a
+                                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                          href="{{ grandchildlink.url }}"
+                                          class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                          {% if grandchildlink.current %}
+                                            aria-current="page"
+                                          {% endif %}
+                                        >
+                                          {{ grandchildlink.title | escape }}
+                                        </a>
+                                      </li>
+                                      {% assign counter = counter | plus: 1 %}
+                                    {%- endif -%}
+                                  {% endunless %}
+                                {%- endfor -%}
+                              </ul>
+                              <ul>
+                                {%- assign counter = 0 -%}
+                                {%- for grandchildlink in childlink.links -%}
+                                  {% unless grandchildlink.title contains 'View All' %}
+                                    {%- if counter >= 6-%}
+                                    <li class="grandchildlink-list">
+                                      <a
+                                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                        href="{{ grandchildlink.url }}"
+                                        class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                        {% if grandchildlink.current %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endif -%}
+                                  {% assign counter = counter | plus: 1 %}
+                                  {% endunless %}
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                            <ul class="view-all-grandchild">
+                              {%- assign counter = 0 -%}
+                              {%- for grandchildlink in childlink.links -%}
+                                {% if grandchildlink.title contains 'View All' %}
+                                  <li class="grandchildlink-list">
+                                    <a
+                                      id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                      href="{{ grandchildlink.url }}"
+                                      class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if grandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{- 'icon-view-all.svg' | inline_asset_content -}}{{ grandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {% endif %}
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                          <ul class="product_blog-link">
+                          </ul>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </details>
+        </header-menu>
+      {%- else -%}
+        <a
+          id="HeaderMenu-{{ link.handle }}"
+          href="{{ link.url }}"
+          class="header__menu-item list-menu__item link link--text focus-inset"
+          {% if link.current %}
+            aria-current="page"
+          {% endif %}
+        >
+          <span
+            {%- if link.current %}
+              class="header__active-menu-item"
+            {% endif %}
+          >
+            {{- link.title | escape -}}
+          </span>
+        </a>
+      {%- endif -%}
+    </li>
+    {% endunless %}
+  {% endfor %}
+</ul>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all details elements inside the header menu
+  const detailsElements = document.querySelectorAll('.header-megamenu details.mega-menu');
+
+  detailsElements.forEach((details) => {
+    const menuList = details.querySelector('.mega-menu__list');
+    const childItems = menuList.querySelectorAll('li');
+    const anchor = menuList.querySelectorAll('li .mega-menu__link');
+
+    // Add event listeners for hover on details
+    details.addEventListener('mouseenter', () => {
+      details.setAttribute('open', true); // Add `open` attribute to details
+      if (childItems.length > 0) {
+        childItems[0].classList.add('hover'); // Add hover class to the first child
+      }
+    });
+
+    details.addEventListener('mouseleave', () => {
+      details.removeAttribute('open'); // Remove `open` attribute from details
+    });
+
+    // Add hover event for child links
+    childItems.forEach((item) => {
+      const link = item.querySelector('h3');
+      if (link) {
+        link.addEventListener('mouseenter', () => {
+          item.classList.add('hover'); // Add hover class to the current item
+        });
+
+        // Add mouseleave event to remove hover class
+        item.addEventListener('mouseleave', () => {
+          item.classList.remove('hover'); // Remove hover class from the current item
+        });
+      }
+    });
+  });
+});
+
+</script>
+{% schema %}
+  {
+    "name": "Megamenu",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Select Menu"
+      }
+    ],
+    "blocks": [{"type": "@theme"}],
+    "presets": [
+      {
+        "name": "Megamenu"
+      }
+    ]
+  }
+{% endschema %}

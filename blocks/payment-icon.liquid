@@ -1,0 +1,57 @@
+<style>
+  .footer__payment-new {
+    display:flex;
+    align-items:center;
+    gap:24px;
+  }
+  
+  .footer__payment-new span{
+    font-family: "Montserrat",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color:#000;
+  }
+  .footer__payment-new ul{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding: 0;
+  }
+  @media (max-width:576px){
+    .list-payment__item svg{
+      width:30px;
+    }
+  }
+</style>
+<div class="footer__payment-new">
+  {% if block.settings.text != blank %}
+    <span>{{ block.settings.text }}</span>
+  {% endif %}
+  <ul class="list list-payment" role="list">
+    {%- for type in shop.enabled_payment_types limit:6 -%}
+      <li class="list-payment__item">
+        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+{% schema %}
+  {
+    "name": "Payment Icon",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Payment Icon"
+      }
+    ]
+  }
+{% endschema %}

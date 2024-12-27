@@ -1,0 +1,282 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    {% if block.settings.button-width-max-content == true %}
+      width:max-content;
+    {% else %}
+      width:{{ block.settings.width }}%;
+    {% endif %}
+  }
+  #shopify-block-{{ block.id }} a{
+    font-family:"{{ block.settings.font-style.family }}",sans-serif;
+    font-size:{{ block.settings.font_size }}px;
+    font-weight:{{ block.settings.font_weight }};
+    line-height:{{ block.settings.line-height }}px;
+    background:{{ block.settings.bg_color }};
+    color:{{ block.settings.color }};
+    border-radius:{{ block.settings.border_radius }}px;
+    padding:{{ block.settings.padding_top_bottom }}px {{ block.settings.padding_left_right }}px;
+    margin:{{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom}}px;
+    text-decoration:{{ block.settings.text-decoration }};
+    display: inline-block;
+    border-style: solid;
+    border-width:{{ block.settings.border_width }}px;
+    border-color:{{ block.settings.border-color }};
+    text-align:{{ block.settings.text-align }};
+    width:100%;
+  }
+  #shopify-block-{{ block.id }} a:hover{
+    background:{{ block.settings.hover_bg_color }};
+    color:{{ block.settings.hover_color }};
+  }
+  @media (max-width:576px){
+    #shopify-block-{{ block.id }}{
+      {% if block.settings.mobile-button-width-max-content == true %}
+        width:max-content;
+      {% else %}
+        width:{{ block.settings.mobile-width }}%;
+      {% endif %}
+    }
+</style>
+<a href="{{ block.settings.button_url }}" class="button-style">
+  {{ block.settings.button_title }}
+</a>
+{% schema %}
+  {
+    "name": "Button",
+    "class":"button-item",
+    "settings": [
+      {
+        "type": "text",
+        "id": "button_title",
+        "label": "Button Title"
+      },
+      {
+        "type": "font_picker",
+        "id": "font-style",
+        "label": "Font Style",
+        "default": "montserrat_n5"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button Url"
+      },
+      {
+        "type": "range",
+        "id": "font_size",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size",
+        "default": 14
+      },
+      {
+        "type": "select",
+        "id": "font_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "500"
+      },
+      {
+        "type": "text",
+        "id": "line-height",
+        "label": "Line Height",
+        "default":"24"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color",
+        "default":"#000"
+      },
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "hover_color",
+        "label": "Hover Color",
+        "default":"#000"
+      },
+      {
+        "type": "color_background",
+        "id": "hover_bg_color",
+        "label": "Hover Background Color"
+      },
+      {
+        "type": "range",
+        "id": "border_radius",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Border Radius",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "border_width",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "Border Width",
+        "default": 0
+      },
+      {
+        "type": "color",
+        "id": "border-color",
+        "label": "Border Color"
+      },
+      {
+        "type": "range",
+        "id": "padding_top_bottom",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_left_right",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Left Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "button-width-max-content",
+        "label": "Button Width Max Content",
+        "default":true
+      },
+      {
+        "type": "select",
+        "id": "text-decoration",
+        "label": "text Decoration",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "underline",
+            "label": "Underline"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "select",
+        "id": "text-align",
+        "label": "text Align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "range",
+        "id": "width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Width",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Mobile Style"
+      },
+      {
+        "type": "range",
+        "id": "mobile-width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Width",
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile-button-width-max-content",
+        "label": "Button Width Max Content",
+        "default":true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Button"
+      }
+    ]
+  }
+{% endschema %}

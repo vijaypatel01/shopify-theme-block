@@ -1,0 +1,25 @@
+<style>
+  .image-item img{
+    width:100%;
+    height:100%;
+  }
+</style>
+<img src="{{ block.settings.image | image_url }}">
+{% schema %}
+  {
+    "name": "Image",
+    "class": "image-item",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,192 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    display:{{ block.settings.display }};
+    flex-direction:{{ block.settings.flex-direction }};
+    justify-content:{{ block.settings.justify-content }};
+    align-items:{{ block.settings.align-items }};
+    gap:{{ block.settings.gap }}px;
+  }
+  @media (max-width:990px){
+    #shopify-block-{{ block.id }}{
+      flex-wrap:wrap;
+    }
+  }
+  @media (max-width:576px){
+    #shopify-block-{{ block.id }}{
+      flex-direction:{{ block.settings.mobile-flex-direction }};
+    }
+  }
+</style>
+{% content_for 'blocks' %}
+{% schema %}
+  {
+    "name": "Button Block",
+    "class": "button-block",
+    "settings": [
+      {
+        "type": "select",
+        "id": "display",
+        "label": "Display",
+        "options": [
+          {
+            "value": "flex",
+            "label": "Flex"
+          },
+          {
+            "value": "block",
+            "label": "Block"
+          },
+          {
+            "value": "grid",
+            "label": "Grid"
+          },
+          {
+            "value": "inline",
+            "label": "Inline"
+          },
+          {
+            "value": "inline-block",
+            "label": "Inline block"
+          },
+          {
+            "value": "inline-flex",
+            "label": "Inline flex"
+          }
+        ],
+        "default": "block"
+      },
+      {
+        "type": "select",
+        "id": "justify-content",
+        "label": "Justify Content",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-start",
+            "label": "Flex start"
+          },
+          {
+            "value": "flex-end",
+            "label": "Flex End"
+          },
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          },
+          {
+            "value": "space-around",
+            "label": "Space around"
+          },
+          {
+            "value": "space-between",
+            "label": "Space between"
+          }
+        ],
+        "default": "space-between"
+      },
+      {
+        "type": "select",
+        "id": "align-items",
+        "label": "Align Items",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-start",
+            "label": "Flex start"
+          },
+          {
+            "value": "flex-end",
+            "label": "Flex End"
+          },
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "flex-direction",
+        "label": "flex-direction",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          },
+          {
+            "value": "row-reverse",
+            "label": "Row reverse"
+          },
+          {
+            "value": "column-reverse",
+            "label": "Column reverse"
+          }
+        ],
+        "default": "row"
+      },
+      {
+        "type": "range",
+        "id": "gap",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Gap",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Mobile Style"
+      },
+      {
+        "type": "select",
+        "id": "mobile-flex-direction",
+        "label": "flex-direction",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          },
+          {
+            "value": "row-reverse",
+            "label": "Row reverse"
+          },
+          {
+            "value": "column-reverse",
+            "label": "Column reverse"
+          }
+        ],
+        "default": "column"
+      }
+    ],
+    "blocks": [{"type": "@theme"}],
+    "presets": [
+      {
+        "name": "Button Block"
+      }
+    ]
+  }
+{% endschema %}

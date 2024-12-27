@@ -1,0 +1,65 @@
+{{ 'component-facets.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+<div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+  {%- if block.settings.enable_filtering or block.settings.enable_sorting -%}
+    <aside
+      aria-labelledby="verticalTitle"
+      class="facets-wrapper{% unless block.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if block.settings.filter_type != 'vertical' %} page-width{% endif %}"
+      id="main-collection-filters"
+      data-id="{{ block.id }}"
+    >
+      {% render 'facets',
+        results: collection,
+        enable_filtering: block.settings.enable_filtering,
+        enable_sorting: block.settings.enable_sorting,
+        filter_type: block.settings.filter_type,
+      %}
+    </aside>
+  {%- endif -%}
+</div>
+{% schema %}
+  {
+    "name": "Collection Filter",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_filtering",
+        "default": true,
+        "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+        "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+      },
+      {
+        "type": "select",
+        "id": "filter_type",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+          },
+          {
+            "value": "vertical",
+            "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+          },
+          {
+            "value": "drawer",
+            "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+          }
+        ],
+        "default": "horizontal",
+        "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+        "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sorting",
+        "default": true,
+        "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Filter"
+      }
+    ]
+  }
+{% endschema %}
