@@ -3589,7 +3589,11 @@ details-disclosure > details {
 .progress-bar .progress-bar-value {
   display: block;
 }
-ul{
+.header-megamenu ul{
+  list-style:none;
+  padding:0;
+}
+ul.header-megamenu{
   list-style:none;
   padding:0;
 }
