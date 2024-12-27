@@ -1,3 +1,8 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    width:{{ block.settings.width }};
+  }
+</style>
 {{ 'component-facets.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
@@ -21,6 +26,11 @@
   {
     "name": "Collection Filter",
     "settings": [
+      {
+        "type": "text",
+        "id": "width",
+        "label": "Width"
+      },
       {
         "type": "checkbox",
         "id": "enable_filtering",
