@@ -199,11 +199,11 @@
                     "list-line-height": "19.5",
                     "list-color": "#000",
                     "display": "flex",
-                    "justify-content": "space-between",
-                    "align-items": "start",
-                    "flex-direction": "column",
+                    "justify-content": "center",
+                    "align-items": "center",
+                    "flex-direction": "row",
                     "text-decoration": "none",
-                    "gap": 12,
+                    "gap": 45,
                     "mobile-width": ""
                   }
                 }
