@@ -110,6 +110,7 @@
                 },
                 "search_field_B9JJfm": {
                   "type": "search-field",
+                  "disabled": true,
                   "settings": {
                     "width": 100
                   }
@@ -117,7 +118,7 @@
                 "header_icon_i6G8eF": {
                   "type": "header-icon",
                   "settings": {
-                    "secrch-icon": false,
+                    "search-icon": true,
                     "profile-icon": true,
                     "cart-icon": true,
                     "width": 100,
@@ -197,7 +198,7 @@
                     "list-font_size": 16,
                     "list-font_weight": "300",
                     "list-line-height": "19.5",
-                    "list-color": "#000",
+                    "list-color": "#000000",
                     "display": "flex",
                     "justify-content": "center",
                     "align-items": "center",
