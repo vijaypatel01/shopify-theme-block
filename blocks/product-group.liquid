@@ -33,7 +33,7 @@
     }
   }
 </style>
-{% for product in block.settings.collection.products %}
+{% for product in block.settings.collection.product %}
     <li>
       {% content_for "block", type: "product-card", id: "card", closest.product: product %}
     </li>
