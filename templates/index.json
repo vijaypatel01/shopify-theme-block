@@ -40,7 +40,7 @@
                 "display": "flex",
                 "justify-content": "space-between",
                 "align-items": "flex-start",
-                "flex-direction": "row",
+                "flex-direction": "column",
                 "gap": 0,
                 "border_width": 0,
                 "border-color": "",
@@ -121,15 +121,14 @@
                     },
                     "product_quantity_maFxVB": {
                       "type": "product-quantity",
-                      "settings": {
-                        "product": "{{ closest.product }}"
-                      }
+                      "settings": {}
                     },
                     "buy_button_PPm4PV": {
                       "type": "buy-button",
                       "settings": {
                         "product": "{{ closest.product }}",
-                        "show_dynamic_checkout": true
+                        "show_dynamic_checkout": true,
+                        "show_gift_card_recipient": true
                       }
                     }
                   },
