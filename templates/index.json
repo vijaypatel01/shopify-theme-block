@@ -124,12 +124,20 @@
                       "settings": {
                         "product": "{{ closest.product }}"
                       }
+                    },
+                    "buy_button_PPm4PV": {
+                      "type": "buy-button",
+                      "settings": {
+                        "product": "{{ closest.product }}",
+                        "show_dynamic_checkout": true
+                      }
                     }
                   },
                   "block_order": [
                     "product_title_fRKxqm",
                     "product_price_ANg6BL",
-                    "product_quantity_maFxVB"
+                    "product_quantity_maFxVB",
+                    "buy_button_PPm4PV"
                   ]
                 }
               },
