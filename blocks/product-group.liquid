@@ -34,7 +34,7 @@
   }
 </style>
 {% assign product = block.settings.product %}
-{% content_for 'blocks' %}
+{% content_for "blocks", closest.product:product  %}
 {% schema %}
   {
     "name": "Product Group",
