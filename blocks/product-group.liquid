@@ -1,0 +1,420 @@
+<style>
+  #shopify-block-{{ block.id }}{
+    background:{{ block.settings.bg_color }};
+    padding:{{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom}}px {{ block.settings.padding_left }}px;
+    margin:{{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom}}px;
+    display:{{ block.settings.display }};
+    flex-direction:{{ block.settings.flex-direction }};
+    justify-content:{{ block.settings.justify-content }};
+    align-items:{{ block.settings.align-items }};
+    width:{{ block.settings.width }}%;
+    gap:{{ block.settings.gap }}px;
+    {% if block.settings.bg_image != blank %}
+      background:url('{{ block.settings.bg_image | image_url }}');
+      background-size: cover;
+      background-position:center;
+    {% endif %}
+    {% if block.settings.border == 'all' %}
+      border-style: solid;
+    {% else %}
+      border-{{ block.settings.border }}:solid;
+    {% endif %}
+    border-width:{{ block.settings.border_width }}px;
+    border-color:{{ block.settings.border-color }};
+  }
+  @media (max-width:576px){
+    #shopify-block-{{ block.id }}{
+      flex-direction:{{ block.settings.mobile-flex-direction }};
+      width:{{ block.settings.mobile-width }}%;
+      padding:{{ block.settings.mobile-padding_top }}px {{ block.settings.mobile-padding_right }}px {{ block.settings.mobile-padding_bottom }}px {{ block.settings.mobile-padding_left }}px;
+      margin:{{ block.settings.mobile-margin_top }}px 0 {{ block.settings.mobile-margin_bottom}}px;
+      gap:{{ block.settings.mobile-gap }}px;
+      flex-wrap:wrap;
+    }
+  }
+</style>
+{% content_for 'blocks' %}
+{% schema %}
+  {
+    "name": "Product Group",
+    "class": "product-group-block",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Select Product"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 250,
+        "step": 10,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 250,
+        "step": 10,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_left",
+        "min": 0,
+        "max": 250,
+        "step": 10,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "padding_right",
+        "min": 0,
+        "max": 250,
+        "step": 10,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Width",
+        "default": 100
+      },
+      {
+        "type": "select",
+        "id": "display",
+        "label": "Display",
+        "options": [
+          {
+            "value": "flex",
+            "label": "Flex"
+          },
+          {
+            "value": "block",
+            "label": "Block"
+          },
+          {
+            "value": "grid",
+            "label": "Grid"
+          },
+          {
+            "value": "inline",
+            "label": "Inline"
+          },
+          {
+            "value": "inline-block",
+            "label": "Inline block"
+          },
+          {
+            "value": "inline-flex",
+            "label": "Inline flex"
+          }
+        ],
+        "default": "block"
+      },
+      {
+        "type": "select",
+        "id": "justify-content",
+        "label": "Justify Content",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-start",
+            "label": "Flex start"
+          },
+          {
+            "value": "flex-end",
+            "label": "Flex End"
+          },
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          },
+          {
+            "value": "space-around",
+            "label": "Space around"
+          },
+          {
+            "value": "space-between",
+            "label": "Space between"
+          }
+        ],
+        "default": "space-between"
+      },
+      {
+        "type": "select",
+        "id": "align-items",
+        "label": "Align Items",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-start",
+            "label": "Flex start"
+          },
+          {
+            "value": "flex-end",
+            "label": "Flex End"
+          },
+          {
+            "value": "start",
+            "label": "Start"
+          },
+          {
+            "value": "end",
+            "label": "End"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "flex-direction",
+        "label": "flex-direction",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          },
+          {
+            "value": "row-reverse",
+            "label": "Row reverse"
+          },
+          {
+            "value": "column-reverse",
+            "label": "Column reverse"
+          }
+        ],
+        "default": "row"
+      },
+      {
+        "type": "range",
+        "id": "gap",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Gap",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "border_width",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Border Width",
+        "default": 0
+      },
+      {
+        "type": "color",
+        "id": "border-color",
+        "label": "Border Color"
+      },
+      {
+        "type": "select",
+        "id": "border",
+        "label": "Border",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "all",
+            "label": "All"
+          }
+        ],
+        "default": "all"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Style"
+      },
+      {
+        "type": "select",
+        "id": "mobile-flex-direction",
+        "label": "flex-direction",
+        "options": [
+          {
+            "value": "row",
+            "label": "Row"
+          },
+          {
+            "value": "column",
+            "label": "Column"
+          },
+          {
+            "value": "row-reverse",
+            "label": "Row reverse"
+          },
+          {
+            "value": "column-reverse",
+            "label": "Column reverse"
+          }
+        ],
+        "default": "column"
+      },
+      {
+        "type": "range",
+        "id": "mobile-width",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Width",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "mobile-padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-padding_right",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-padding_left",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "margin Top",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Margin Bottom",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "mobile-gap",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Gap",
+        "default": 0
+      }
+    ],
+    "blocks": [{"type": "@theme"}],
+    "presets": [
+      {
+        "name": "Product Group"
+      }
+    ]
+  }
+{% endschema %}
