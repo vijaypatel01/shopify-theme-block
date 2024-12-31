@@ -1,1 +1,79 @@
-{"sections":{"custom_section_thcYhh":{"type":"custom-section","blocks":{"container_tH7tkf":{"type":"container","settings":{"bg_color":"","border_width":0,"border-color":"","border":"all"},"blocks":{"group_gBTHKr":{"type":"group","settings":{"bg_color":"","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"flex","justify-content":"space-between","align-items":"center","flex-direction":"row","gap":50,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":0,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":30},"blocks":{"group_manDLT":{"type":"group","settings":{"bg_image":"shopify:\/\/shop_images\/collection-category-1.png","bg_color":"","padding_top":250,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"block","justify-content":"space-between","align-items":"center","flex-direction":"row","gap":0,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":50,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":0},"blocks":{"text_block_3P4JEW":{"type":"text-block","settings":{"width":"232px","bg_color":"#F0ECE8","border_radius":0,"padding_top":19,"padding_right":16,"padding_bottom":19,"padding_left":16,"margin_top":13,"margin_bottom":0,"mobile-width":"219px","mobile-padding_top":19,"mobile-padding_right":16,"mobile-padding_bottom":19,"mobile-padding_left":16,"mobile-margin_top":0,"mobile-margin_bottom":0},"blocks":{"subheading_YcMFXt":{"type":"subheading","settings":{"font-style":"montserrat_n5","heading_size":"span","text":"Aliver Cosmetics","font_size":14,"font_weight":"300","line-height":"17.07","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":10}},"heading_Nz4HRr":{"type":"heading","settings":{"font-style":"montserrat_n5","heading_size":"h3","text":"For Her","font_size":26,"font_weight":"400","line-height":"29.25","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":6}},"description_tUw8r8":{"type":"description","settings":{"description":"<p>Luxury Cosmetics Tailored to Her Every Need<\/p>","font-style":"montserrat_n5","font_size":16,"font_weight":"300","line-height":"19.5","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":100,"mobile-padding_top":0,"mobile-padding_bottom":0,"mobile-margin_top":0,"mobile-margin_bottom":20}},"button_e8xmpA":{"type":"button","settings":{"button_title":"Shop For Her","font-style":"montserrat_n5","button_url":"","font_size":16,"font_weight":"600","line-height":"19.5","color":"#ba9d88","bg_color":"","hover_color":"#000000","hover_bg_color":"","border_radius":0,"border_width":0,"border-color":"","padding_top_bottom":0,"padding_left_right":0,"margin_top":0,"margin_bottom":0,"button-width-max-content":true,"text-decoration":"underline","text-align":"left","width":0,"mobile-width":0,"mobile-button-width-max-content":true}}},"block_order":["subheading_YcMFXt","heading_Nz4HRr","description_tUw8r8","button_e8xmpA"]}},"block_order":["text_block_3P4JEW"]},"group_FpqNax":{"type":"group","settings":{"bg_color":"","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"flex","justify-content":"space-between","align-items":"center","flex-direction":"column","gap":30,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":0,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":30},"blocks":{"group_BUEQ8a":{"type":"group","settings":{"bg_image":"shopify:\/\/shop_images\/collection-category-2.png","bg_color":"","padding_top":50,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"block","justify-content":"space-between","align-items":"center","flex-direction":"row","gap":0,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":50,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":0},"blocks":{"text_block_A8pTKG":{"type":"text-block","settings":{"width":"219px","bg_color":"#F0ECE8","border_radius":0,"padding_top":19,"padding_right":16,"padding_bottom":19,"padding_left":16,"margin_top":0,"margin_bottom":0,"mobile-width":"219px","mobile-padding_top":19,"mobile-padding_right":16,"mobile-padding_bottom":19,"mobile-padding_left":16,"mobile-margin_top":0,"mobile-margin_bottom":0},"blocks":{"subheading_e4YpXk":{"type":"subheading","settings":{"font-style":"montserrat_n5","heading_size":"span","text":"Aliver Cosmetics","font_size":14,"font_weight":"300","line-height":"17.07","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":10}},"heading_WneQ8r":{"type":"heading","settings":{"font-style":"montserrat_n5","heading_size":"h3","text":"For Him","font_size":26,"font_weight":"400","line-height":"29.25","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":6}},"description_ahtgUB":{"type":"description","settings":{"description":"<p>Elevate His Daily Routine with Luxury Skincare Solutions<\/p>","font-style":"montserrat_n5","font_size":16,"font_weight":"300","line-height":"19.5","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":20,"mobile-padding_top":0,"mobile-padding_bottom":0,"mobile-margin_top":0,"mobile-margin_bottom":20}},"button_Fa3Gfh":{"type":"button","settings":{"button_title":"Shop For Him","font-style":"montserrat_n5","button_url":"","font_size":16,"font_weight":"600","line-height":"19.5","color":"#ba9d88","bg_color":"","hover_color":"#000000","hover_bg_color":"","border_radius":0,"border_width":0,"border-color":"","padding_top_bottom":0,"padding_left_right":0,"margin_top":0,"margin_bottom":0,"button-width-max-content":true,"text-decoration":"underline","text-align":"left","width":0,"mobile-width":0,"mobile-button-width-max-content":true}}},"block_order":["subheading_e4YpXk","heading_WneQ8r","description_ahtgUB","button_Fa3Gfh"]}},"block_order":["text_block_A8pTKG"]},"group_eGmCT4":{"type":"group","settings":{"bg_image":"shopify:\/\/shop_images\/collection-category-3.png","bg_color":"","padding_top":30,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"block","justify-content":"space-between","align-items":"center","flex-direction":"row","gap":0,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":30,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":0},"blocks":{"text_block_cjG77K":{"type":"text-block","settings":{"width":"219px","bg_color":"#F0ECE8","border_radius":0,"padding_top":19,"padding_right":16,"padding_bottom":19,"padding_left":16,"margin_top":0,"margin_bottom":0,"mobile-width":"219px","mobile-padding_top":19,"mobile-padding_right":16,"mobile-padding_bottom":19,"mobile-padding_left":16,"mobile-margin_top":0,"mobile-margin_bottom":0},"blocks":{"subheading_xA7e4h":{"type":"subheading","settings":{"font-style":"montserrat_n5","heading_size":"span","text":"Aliver Cosmetics","font_size":14,"font_weight":"300","line-height":"17.07","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":10}},"heading_ccdcgN":{"type":"heading","settings":{"font-style":"montserrat_n5","heading_size":"h3","text":"For Everyone","font_size":26,"font_weight":"400","line-height":"29.25","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":6}},"description_YCfL89":{"type":"description","settings":{"description":"<p>Discover Versatile Skincare Solutions Catered to Everyone's Needs<\/p>","font-style":"montserrat_n5","font_size":16,"font_weight":"300","line-height":"19.5","color":"#0c0c0c","padding_top":0,"padding_bottom":0,"margin_top":0,"margin_bottom":20,"mobile-padding_top":0,"mobile-padding_bottom":0,"mobile-margin_top":0,"mobile-margin_bottom":20}},"button_Rnfi34":{"type":"button","settings":{"button_title":"Shop For Everyone","font-style":"montserrat_n5","button_url":"","font_size":16,"font_weight":"600","line-height":"19.5","color":"#ba9d88","bg_color":"","hover_color":"#000000","hover_bg_color":"","border_radius":0,"border_width":0,"border-color":"","padding_top_bottom":0,"padding_left_right":0,"margin_top":0,"margin_bottom":0,"button-width-max-content":true,"text-decoration":"underline","text-align":"left","width":0,"mobile-width":0,"mobile-button-width-max-content":true}}},"block_order":["subheading_xA7e4h","heading_ccdcgN","description_YCfL89","button_Rnfi34"]}},"block_order":["text_block_cjG77K"]}},"block_order":["group_BUEQ8a","group_eGmCT4"]}},"block_order":["group_manDLT","group_FpqNax"]}},"block_order":["group_gBTHKr"]}},"block_order":["container_tH7tkf"],"settings":{}},"image_banner_GUj7Hg":{"type":"image-banner","blocks":{"heading_Fx7edz":{"type":"heading","settings":{"heading":"Image banner","heading_size":"h1"}},"text_QgJyHD":{"type":"text","settings":{"text":"Give customers details about the banner image(s) or content on the template.","text_style":"body"}},"buttons_pxNcz7":{"type":"buttons","settings":{"button_label_1":"Button label","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Button label","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_Fx7edz","text_QgJyHD","buttons_pxNcz7"],"settings":{"image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"scheme-2","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"custom_section_JxQM38":{"type":"custom-section","blocks":{"container_Xt9yFf":{"type":"container","settings":{"bg_color":"","border_width":0,"border-color":"","border":"all"},"blocks":{"group_e7WjTt":{"type":"group","settings":{"bg_color":"","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":0,"margin_top":0,"margin_bottom":0,"width":100,"display":"block","justify-content":"space-between","align-items":"center","flex-direction":"row","gap":0,"border_width":0,"border-color":"","border":"all","mobile-flex-direction":"column","mobile-width":100,"mobile-padding_top":0,"mobile-padding_right":0,"mobile-padding_bottom":0,"mobile-padding_left":0,"mobile-margin_top":0,"mobile-margin_bottom":0,"mobile-gap":0},"blocks":{"collection_TKeHEf":{"type":"collection","settings":{"collection":"pokemon","products_to_show":8,"columns_desktop":4,"image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":true,"show_rating":true,"quick_add":"standard","columns_mobile":"1"}}},"block_order":["collection_TKeHEf"]}},"block_order":["group_e7WjTt"]}},"block_order":["container_Xt9yFf"],"settings":{}}},"order":["custom_section_thcYhh","image_banner_GUj7Hg","custom_section_JxQM38"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_section_jRywKp": {
+      "type": "custom-section",
+      "blocks": {
+        "product_group_UADWjm": {
+          "type": "product-group",
+          "settings": {
+            "bg_color": "",
+            "product": "10inch-anime-cute-digital-monster-digimon-koromon-soft-plush-toy-doll-pillow",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "padding_left": 0,
+            "padding_right": 0,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "width": 100,
+            "display": "block",
+            "justify-content": "space-between",
+            "align-items": "center",
+            "flex-direction": "row",
+            "gap": 0,
+            "border_width": 0,
+            "border-color": "",
+            "border": "all",
+            "mobile-flex-direction": "column",
+            "mobile-width": 100,
+            "mobile-padding_top": 0,
+            "mobile-padding_right": 0,
+            "mobile-padding_bottom": 0,
+            "mobile-padding_left": 0,
+            "mobile-margin_top": 0,
+            "mobile-margin_bottom": 0,
+            "mobile-gap": 0
+          },
+          "blocks": {
+            "image_block_RdqX67": {
+              "type": "image-block",
+              "settings": {
+                "width": "",
+                "height": "",
+                "mobile-width": 100,
+                "mobile-height": ""
+              },
+              "blocks": {
+                "image_wAmUDy": {
+                  "type": "image",
+                  "settings": {}
+                }
+              },
+              "block_order": [
+                "image_wAmUDy"
+              ]
+            }
+          },
+          "block_order": [
+            "image_block_RdqX67"
+          ]
+        }
+      },
+      "block_order": [
+        "product_group_UADWjm"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "custom_section_jRywKp"
+  ]
+}
