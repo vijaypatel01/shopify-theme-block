@@ -414,7 +414,34 @@
     "blocks": [{"type": "image-block"},{"type": "text-block"}],
     "presets": [
       {
-        "name": "Product Group"
+        "name": "Product Group",
+        "blocks": [
+          {
+            "type": "image-block",
+            "blocks": [
+              {
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "type": "text-block",
+            "blocks": [
+              {
+                "type": "product-title"
+              },
+              {
+                "type": "product-price"
+              },
+              {
+                "type": "product-quantity"
+              },
+              {
+                "type": "product-variant"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
