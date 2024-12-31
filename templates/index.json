@@ -106,10 +106,15 @@
                         "margin_top": 0,
                         "margin_bottom": 0
                       }
+                    },
+                    "product_price_y93mrF": {
+                      "type": "product-price",
+                      "settings": {}
                     }
                   },
                   "block_order": [
-                    "product_title_cbx8kT"
+                    "product_title_cbx8kT",
+                    "product_price_y93mrF"
                   ]
                 }
               },
