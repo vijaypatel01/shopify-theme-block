@@ -61,13 +61,15 @@
                     "mobile-height": ""
                   },
                   "blocks": {
-                    "product_image_b3QL6Q": {
-                      "type": "product-image",
-                      "settings": {}
+                    "image_x9LaXQ": {
+                      "type": "image",
+                      "settings": {
+                        "image": "{{ closest.product.featured_image }}"
+                      }
                     }
                   },
                   "block_order": [
-                    "product_image_b3QL6Q"
+                    "image_x9LaXQ"
                   ]
                 },
                 "text_block_n9RNyd": {
