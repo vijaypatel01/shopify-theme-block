@@ -198,13 +198,20 @@
                         "picker_type": "button",
                         "swatch_shape": "circle"
                       }
+                    },
+                    "buy_button_Q7KVwK": {
+                      "type": "buy-button",
+                      "settings": {
+                        "product": "{{ closest.product }}"
+                      }
                     }
                   },
                   "block_order": [
                     "product_title_qXXMH6",
                     "product_price_yRqHj7",
                     "product_quantity_Mp4zfx",
-                    "product_variant_nL3EE4"
+                    "product_variant_nL3EE4",
+                    "buy_button_Q7KVwK"
                   ]
                 }
               },
