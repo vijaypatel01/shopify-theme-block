@@ -4,7 +4,7 @@
   block: block,
   product: product,
   product_form_id: product_form_id,
-  section_id: block.id,
+  section_id: section.id,
   show_pickup_availability: true
 -%}
 {% schema %}
@@ -15,6 +15,20 @@
         "type": "product",
         "id": "product",
         "label": "Product"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_dynamic_checkout",
+        "default": true,
+        "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+        "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_gift_card_recipient",
+        "default": true,
+        "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
+        "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
       }
     ],
     "presets": [
