@@ -180,37 +180,15 @@
                 "mobile-gap": 0
               },
               "blocks": {
-                "header_menu_AJpbqz": {
-                  "type": "header-menu",
+                "megamenu_qigbrt": {
+                  "type": "megamenu",
                   "settings": {
-                    "menu": "main-menu",
-                    "width": 100,
-                    "font-style": "ovo_n4",
-                    "font_size": 20,
-                    "font_weight": "400",
-                    "line-height": "24",
-                    "color": "#000000",
-                    "padding_top": 0,
-                    "padding_bottom": 0,
-                    "margin_top": 0,
-                    "margin_bottom": 16,
-                    "list-font-style": "montserrat_n5",
-                    "list-font_size": 16,
-                    "list-font_weight": "300",
-                    "list-line-height": "19.5",
-                    "list-color": "#000000",
-                    "display": "flex",
-                    "justify-content": "center",
-                    "align-items": "center",
-                    "flex-direction": "row",
-                    "text-decoration": "none",
-                    "gap": 45,
-                    "mobile-width": ""
+                    "main_linklist": "main-menu"
                   }
                 }
               },
               "block_order": [
-                "header_menu_AJpbqz"
+                "megamenu_qigbrt"
               ]
             }
           },
