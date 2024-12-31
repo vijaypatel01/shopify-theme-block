@@ -1,4 +1,4 @@
-{{ block.settings.product.price | default: 1999 }}
+{{ block.settings.product.price | money | default: 1999 }}
 {% schema %}
   {
     "name": "Product Price",
