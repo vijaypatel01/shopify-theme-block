@@ -1,8 +1,10 @@
+{%- assign product_form_id = 'product-form-' | append: block.id -%}
+{%- assign product = block.settings.product -%}
 {%- render 'buy-buttons',
   block: block,
   product: product,
   product_form_id: product_form_id,
-  section_id: section.id,
+  section_id: block.id,
   show_pickup_availability: true
 -%}
 {% schema %}
