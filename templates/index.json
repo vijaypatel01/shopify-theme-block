@@ -11,48 +11,52 @@
   "sections": {
     "custom_section_jRywKp": {
       "type": "custom-section",
+      "settings": {}
+    },
+    "custom_section_pAwGc9": {
+      "type": "custom-section",
       "blocks": {
-        "product_group_BqGW4Y": {
-          "type": "product-group",
+        "container_f6jQK8": {
+          "type": "container",
           "settings": {
             "bg_color": "",
-            "product": "10inch-anime-cute-digital-monster-digimon-koromon-soft-plush-toy-doll-pillow",
-            "padding_top": 50,
-            "padding_bottom": 50,
-            "padding_left": 0,
-            "padding_right": 0,
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "width": 100,
-            "display": "block",
-            "justify-content": "space-between",
-            "align-items": "center",
-            "flex-direction": "row",
-            "gap": 0,
             "border_width": 0,
             "border-color": "",
-            "border": "all",
-            "mobile-flex-direction": "column",
-            "mobile-width": 100,
-            "mobile-padding_top": 0,
-            "mobile-padding_right": 0,
-            "mobile-padding_bottom": 0,
-            "mobile-padding_left": 0,
-            "mobile-margin_top": 0,
-            "mobile-margin_bottom": 0,
-            "mobile-gap": 0
+            "border": "all"
           },
           "blocks": {
-            "container_aRmQxw": {
-              "type": "container",
+            "product_group_rhQjrf": {
+              "type": "product-group",
               "settings": {
                 "bg_color": "",
+                "product": "10inch-anime-cute-digital-monster-digimon-koromon-soft-plush-toy-doll-pillow",
+                "padding_top": 50,
+                "padding_bottom": 50,
+                "padding_left": 0,
+                "padding_right": 0,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "width": 100,
+                "display": "block",
+                "justify-content": "space-between",
+                "align-items": "center",
+                "flex-direction": "row",
+                "gap": 0,
                 "border_width": 0,
                 "border-color": "",
-                "border": "all"
+                "border": "all",
+                "mobile-flex-direction": "column",
+                "mobile-width": 100,
+                "mobile-padding_top": 0,
+                "mobile-padding_right": 0,
+                "mobile-padding_bottom": 0,
+                "mobile-padding_left": 0,
+                "mobile-margin_top": 0,
+                "mobile-margin_bottom": 0,
+                "mobile-gap": 0
               },
               "blocks": {
-                "image_block_Uetr8h": {
+                "image_block_QzFtnA": {
                   "type": "image-block",
                   "settings": {
                     "width": "",
@@ -61,18 +65,16 @@
                     "mobile-height": ""
                   },
                   "blocks": {
-                    "image_x9LaXQ": {
+                    "image_L9QNED": {
                       "type": "image",
-                      "settings": {
-                        "image": "{{ closest.product.featured_image }}"
-                      }
+                      "settings": {}
                     }
                   },
                   "block_order": [
-                    "image_x9LaXQ"
+                    "image_L9QNED"
                   ]
                 },
-                "text_block_n9RNyd": {
+                "text_block_qazL8i": {
                   "type": "text-block",
                   "settings": {
                     "width": "",
@@ -93,12 +95,12 @@
                     "mobile-margin_bottom": 0
                   },
                   "blocks": {
-                    "product_title_cbx8kT": {
+                    "product_title_ezHRG6": {
                       "type": "product-title",
                       "settings": {
                         "font-style": "montserrat_n5",
                         "heading_size": "h2",
-                        "text": "{{ closest.product.title }}",
+                        "text": "",
                         "font_size": 36,
                         "font_weight": "400",
                         "line-height": "50.4",
@@ -109,35 +111,49 @@
                         "margin_bottom": 0
                       }
                     },
-                    "product_price_y93mrF": {
+                    "product_price_nakWcM": {
                       "type": "product-price",
                       "settings": {}
+                    },
+                    "product_quantity_a6Wrxr": {
+                      "type": "product-quantity",
+                      "settings": {}
+                    },
+                    "product_variant_HW9kKF": {
+                      "type": "product-variant",
+                      "settings": {
+                        "picker_type": "button",
+                        "swatch_shape": "circle"
+                      }
                     }
                   },
                   "block_order": [
-                    "product_title_cbx8kT",
-                    "product_price_y93mrF"
+                    "product_title_ezHRG6",
+                    "product_price_nakWcM",
+                    "product_quantity_a6Wrxr",
+                    "product_variant_HW9kKF"
                   ]
                 }
               },
               "block_order": [
-                "image_block_Uetr8h",
-                "text_block_n9RNyd"
+                "image_block_QzFtnA",
+                "text_block_qazL8i"
               ]
             }
           },
           "block_order": [
-            "container_aRmQxw"
+            "product_group_rhQjrf"
           ]
         }
       },
       "block_order": [
-        "product_group_BqGW4Y"
+        "container_f6jQK8"
       ],
       "settings": {}
     }
   },
   "order": [
-    "custom_section_jRywKp"
+    "custom_section_jRywKp",
+    "custom_section_pAwGc9"
   ]
 }
