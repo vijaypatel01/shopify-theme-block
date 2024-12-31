@@ -67,7 +67,9 @@
                   "blocks": {
                     "image_XizzFn": {
                       "type": "image",
-                      "settings": {}
+                      "settings": {
+                        "image": "{{ closest.product.featured_image }}"
+                      }
                     }
                   },
                   "block_order": [
@@ -100,7 +102,7 @@
                       "settings": {
                         "font-style": "montserrat_n5",
                         "heading_size": "h2",
-                        "text": "",
+                        "text": "{{ closest.product.title }}",
                         "font_size": 36,
                         "font_weight": "400",
                         "line-height": "50.4",
@@ -114,26 +116,18 @@
                     "product_price_ANg6BL": {
                       "type": "product-price",
                       "settings": {
-                        "product": ""
+                        "product": "{{ closest.product }}"
                       }
                     },
                     "product_quantity_maFxVB": {
                       "type": "product-quantity",
                       "settings": {}
-                    },
-                    "product_variant_KziKFX": {
-                      "type": "product-variant",
-                      "settings": {
-                        "picker_type": "button",
-                        "swatch_shape": "circle"
-                      }
                     }
                   },
                   "block_order": [
                     "product_title_fRKxqm",
                     "product_price_ANg6BL",
-                    "product_quantity_maFxVB",
-                    "product_variant_KziKFX"
+                    "product_quantity_maFxVB"
                   ]
                 }
               },
