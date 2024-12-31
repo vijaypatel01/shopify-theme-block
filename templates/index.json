@@ -100,7 +100,7 @@
                       "settings": {
                         "font-style": "montserrat_n5",
                         "heading_size": "h2",
-                        "text": "",
+                        "text": "{{ closest.product.title }}",
                         "font_size": 36,
                         "font_weight": "400",
                         "line-height": "50.4",
