@@ -171,7 +171,7 @@
                     "group_Nefmdg": {
                       "type": "group",
                       "settings": {
-                        "bg_color": "",
+                        "bg_color": "linear-gradient(136deg, rgba(10, 234, 237, 1) 11%, rgba(250, 13, 253, 1) 84%)",
                         "padding_top": 20,
                         "padding_bottom": 20,
                         "padding_left": 20,
@@ -242,7 +242,7 @@
                     "group_LyaWGf": {
                       "type": "group",
                       "settings": {
-                        "bg_color": "",
+                        "bg_color": "linear-gradient(295deg, rgba(251, 51, 166, 1), rgba(127, 72, 176, 1) 49%, rgba(48, 145, 211, 1) 100%)",
                         "padding_top": 20,
                         "padding_bottom": 20,
                         "padding_left": 20,
