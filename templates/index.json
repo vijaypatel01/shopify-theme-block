@@ -153,7 +153,7 @@
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "width": 100,
-                "display": "block",
+                "display": "flex",
                 "justify-content": "space-between",
                 "align-items": "center",
                 "flex-direction": "row",
@@ -175,7 +175,7 @@
                 "image_block_wKwcNW": {
                   "type": "image-block",
                   "settings": {
-                    "width": "",
+                    "width": "50%",
                     "height": "",
                     "mobile-width": 100,
                     "mobile-height": ""
@@ -195,7 +195,7 @@
                 "text_block_jGABC6": {
                   "type": "text-block",
                   "settings": {
-                    "width": "",
+                    "width": "50%",
                     "bg_color": "",
                     "border_radius": 0,
                     "padding_top": 0,
