@@ -436,11 +436,40 @@
                     "group_dk8Yda",
                     "group_Fj4D3C"
                   ]
+                },
+                "button_d3fYTW": {
+                  "type": "button",
+                  "settings": {
+                    "button_title": "",
+                    "font-style": "montserrat_n5",
+                    "button_url": "",
+                    "font_size": 14,
+                    "font_weight": "500",
+                    "line-height": "24",
+                    "color": "#000",
+                    "bg_color": "",
+                    "hover_color": "#000",
+                    "hover_bg_color": "",
+                    "border_radius": 0,
+                    "border_width": 0,
+                    "border-color": "",
+                    "padding_top_bottom": 0,
+                    "padding_left_right": 0,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "button-width-max-content": true,
+                    "text-decoration": "none",
+                    "text-align": "left",
+                    "width": 0,
+                    "mobile-width": 0,
+                    "mobile-button-width-max-content": true
+                  }
                 }
               },
               "block_order": [
                 "heading_WaiVDR",
-                "group_fhAxAD"
+                "group_fhAxAD",
+                "button_d3fYTW"
               ]
             }
           },
