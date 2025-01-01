@@ -239,11 +239,12 @@
                       "type": "product-quantity",
                       "settings": {}
                     },
-                    "product_variant_tiLMDM": {
-                      "type": "product-variant",
+                    "buy_button_itdmYV": {
+                      "type": "buy-button",
                       "settings": {
-                        "picker_type": "button",
-                        "swatch_shape": "circle"
+                        "product": "{{ closest.product }}",
+                        "show_dynamic_checkout": true,
+                        "show_gift_card_recipient": true
                       }
                     }
                   },
@@ -251,7 +252,7 @@
                     "product_title_LM7aaj",
                     "product_price_w6LngF",
                     "product_quantity_C3WPwb",
-                    "product_variant_tiLMDM"
+                    "buy_button_itdmYV"
                   ]
                 }
               },
