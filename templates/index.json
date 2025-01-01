@@ -129,10 +129,10 @@
       "disabled": true,
       "settings": {}
     },
-    "custom_section_CKAxdV": {
+    "custom_section_ABmf9a": {
       "type": "custom-section",
       "blocks": {
-        "container_NLrCFH": {
+        "container_JJxbjw": {
           "type": "container",
           "settings": {
             "bg_color": "",
@@ -141,7 +141,7 @@
             "border": "all"
           },
           "blocks": {
-            "group_b4QfYF": {
+            "group_d8wFQC": {
               "type": "group",
               "settings": {
                 "bg_color": "",
@@ -171,12 +171,12 @@
                 "mobile-gap": 0
               },
               "blocks": {
-                "heading_WaiVDR": {
+                "heading_WFzGBy": {
                   "type": "heading",
                   "settings": {
                     "font-style": "montserrat_n5",
                     "heading_size": "h2",
-                    "text": "",
+                    "text": "Heading",
                     "font_size": 36,
                     "font_weight": "400",
                     "line-height": "50.4",
@@ -187,22 +187,22 @@
                     "margin_bottom": 0
                   }
                 },
-                "group_fhAxAD": {
+                "group_7rpHyT": {
                   "type": "group",
                   "settings": {
                     "bg_color": "",
-                    "padding_top": 50,
-                    "padding_bottom": 50,
+                    "padding_top": 20,
+                    "padding_bottom": 20,
                     "padding_left": 0,
                     "padding_right": 0,
                     "margin_top": 0,
                     "margin_bottom": 0,
                     "width": 100,
-                    "display": "block",
+                    "display": "flex",
                     "justify-content": "space-between",
                     "align-items": "center",
                     "flex-direction": "row",
-                    "gap": 0,
+                    "gap": 20,
                     "border_width": 0,
                     "border-color": "",
                     "border": "all",
@@ -217,12 +217,12 @@
                     "mobile-gap": 0
                   },
                   "blocks": {
-                    "group_KJNVB8": {
+                    "group_F77ALK": {
                       "type": "group",
                       "settings": {
                         "bg_color": "",
-                        "padding_top": 50,
-                        "padding_bottom": 50,
+                        "padding_top": 0,
+                        "padding_bottom": 0,
                         "padding_left": 0,
                         "padding_right": 0,
                         "margin_top": 0,
@@ -247,12 +247,12 @@
                         "mobile-gap": 0
                       },
                       "blocks": {
-                        "heading_dDJL9P": {
+                        "heading_VdRBfV": {
                           "type": "heading",
                           "settings": {
                             "font-style": "montserrat_n5",
                             "heading_size": "h2",
-                            "text": "",
+                            "text": "Heading",
                             "font_size": 36,
                             "font_weight": "400",
                             "line-height": "50.4",
@@ -263,10 +263,10 @@
                             "margin_bottom": 0
                           }
                         },
-                        "description_yFCtfM": {
+                        "description_3GAVB7": {
                           "type": "description",
                           "settings": {
-                            "description": "",
+                            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
                             "font-style": "montserrat_n5",
                             "font_size": 16,
                             "font_weight": "300",
@@ -284,16 +284,16 @@
                         }
                       },
                       "block_order": [
-                        "heading_dDJL9P",
-                        "description_yFCtfM"
+                        "heading_VdRBfV",
+                        "description_3GAVB7"
                       ]
                     },
-                    "group_dk8Yda": {
+                    "group_Nefmdg": {
                       "type": "group",
                       "settings": {
                         "bg_color": "",
-                        "padding_top": 50,
-                        "padding_bottom": 50,
+                        "padding_top": 0,
+                        "padding_bottom": 0,
                         "padding_left": 0,
                         "padding_right": 0,
                         "margin_top": 0,
@@ -318,12 +318,12 @@
                         "mobile-gap": 0
                       },
                       "blocks": {
-                        "heading_Q94iDP": {
+                        "heading_4YCwn9": {
                           "type": "heading",
                           "settings": {
                             "font-style": "montserrat_n5",
                             "heading_size": "h2",
-                            "text": "",
+                            "text": "Heading",
                             "font_size": 36,
                             "font_weight": "400",
                             "line-height": "50.4",
@@ -334,10 +334,10 @@
                             "margin_bottom": 0
                           }
                         },
-                        "description_F7DpDD": {
+                        "description_wPxXpQ": {
                           "type": "description",
                           "settings": {
-                            "description": "",
+                            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
                             "font-style": "montserrat_n5",
                             "font_size": 16,
                             "font_weight": "300",
@@ -355,16 +355,16 @@
                         }
                       },
                       "block_order": [
-                        "heading_Q94iDP",
-                        "description_F7DpDD"
+                        "heading_4YCwn9",
+                        "description_wPxXpQ"
                       ]
                     },
-                    "group_Fj4D3C": {
+                    "group_LyaWGf": {
                       "type": "group",
                       "settings": {
                         "bg_color": "",
-                        "padding_top": 50,
-                        "padding_bottom": 50,
+                        "padding_top": 0,
+                        "padding_bottom": 0,
                         "padding_left": 0,
                         "padding_right": 0,
                         "margin_top": 0,
@@ -389,12 +389,12 @@
                         "mobile-gap": 0
                       },
                       "blocks": {
-                        "heading_YWKDP3": {
+                        "heading_nTVkPF": {
                           "type": "heading",
                           "settings": {
                             "font-style": "montserrat_n5",
                             "heading_size": "h2",
-                            "text": "",
+                            "text": "Heading",
                             "font_size": 36,
                             "font_weight": "400",
                             "line-height": "50.4",
@@ -405,10 +405,10 @@
                             "margin_bottom": 0
                           }
                         },
-                        "description_jTrfBn": {
+                        "description_mcHTYz": {
                           "type": "description",
                           "settings": {
-                            "description": "",
+                            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
                             "font-style": "montserrat_n5",
                             "font_size": 16,
                             "font_weight": "300",
@@ -426,21 +426,21 @@
                         }
                       },
                       "block_order": [
-                        "heading_YWKDP3",
-                        "description_jTrfBn"
+                        "heading_nTVkPF",
+                        "description_mcHTYz"
                       ]
                     }
                   },
                   "block_order": [
-                    "group_KJNVB8",
-                    "group_dk8Yda",
-                    "group_Fj4D3C"
+                    "group_F77ALK",
+                    "group_Nefmdg",
+                    "group_LyaWGf"
                   ]
                 },
-                "button_d3fYTW": {
+                "button_JahRqW": {
                   "type": "button",
                   "settings": {
-                    "button_title": "",
+                    "button_title": "Button Label",
                     "font-style": "montserrat_n5",
                     "button_url": "",
                     "font_size": 14,
@@ -467,25 +467,25 @@
                 }
               },
               "block_order": [
-                "heading_WaiVDR",
-                "group_fhAxAD",
-                "button_d3fYTW"
+                "heading_WFzGBy",
+                "group_7rpHyT",
+                "button_JahRqW"
               ]
             }
           },
           "block_order": [
-            "group_b4QfYF"
+            "group_d8wFQC"
           ]
         }
       },
       "block_order": [
-        "container_NLrCFH"
+        "container_JJxbjw"
       ],
       "settings": {}
     }
   },
   "order": [
     "custom_section_jRywKp",
-    "custom_section_CKAxdV"
+    "custom_section_ABmf9a"
   ]
 }
