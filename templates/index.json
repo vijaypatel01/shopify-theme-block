@@ -9,24 +9,6 @@
  */
 {
   "sections": {
-    "custom_section_ABmf9a": {
-      "type": "custom-section",
-      "blocks": {
-        "container_JJxbjw": {
-          "type": "container",
-          "settings": {
-            "bg_color": "",
-            "border_width": 0,
-            "border-color": "",
-            "border": "all"
-          }
-        }
-      },
-      "block_order": [
-        "container_JJxbjw"
-      ],
-      "settings": {}
-    },
     "custom_section_hYkhcD": {
       "type": "custom-section",
       "blocks": {
@@ -108,7 +90,6 @@
     }
   },
   "order": [
-    "custom_section_ABmf9a",
     "custom_section_hYkhcD"
   ]
 }
