@@ -27,10 +27,10 @@
       ],
       "settings": {}
     },
-    "custom_section_c4TetJ": {
+    "custom_section_hYkhcD": {
       "type": "custom-section",
       "blocks": {
-        "container_iR4D7W": {
+        "container_M86HbG": {
           "type": "container",
           "settings": {
             "bg_color": "",
@@ -39,7 +39,7 @@
             "border": "all"
           },
           "blocks": {
-            "group_DBG3jK": {
+            "group_iJ7FCV": {
               "type": "group",
               "settings": {
                 "bg_color": "",
@@ -50,7 +50,7 @@
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "width": 100,
-                "display": "block",
+                "display": "flex",
                 "justify-content": "space-between",
                 "align-items": "normal",
                 "flex-direction": "row",
@@ -69,33 +69,45 @@
                 "mobile-gap": 0
               },
               "blocks": {
-                "artical_box_MMMhVK": {
-                  "type": "artical-box",
+                "article_jGdF9b": {
+                  "type": "article",
                   "settings": {
-                    "blog": "news",
-                    "post_limit": 4,
-                    "columns_desktop": 4
+                    "article": ""
+                  }
+                },
+                "article_aYxg4Q": {
+                  "type": "article",
+                  "settings": {
+                    "article": ""
+                  }
+                },
+                "article_eYhLFe": {
+                  "type": "article",
+                  "settings": {
+                    "article": ""
                   }
                 }
               },
               "block_order": [
-                "artical_box_MMMhVK"
+                "article_jGdF9b",
+                "article_aYxg4Q",
+                "article_eYhLFe"
               ]
             }
           },
           "block_order": [
-            "group_DBG3jK"
+            "group_iJ7FCV"
           ]
         }
       },
       "block_order": [
-        "container_iR4D7W"
+        "container_M86HbG"
       ],
       "settings": {}
     }
   },
   "order": [
     "custom_section_ABmf9a",
-    "custom_section_c4TetJ"
+    "custom_section_hYkhcD"
   ]
 }
