@@ -1,18 +1,18 @@
 {%- liquid
-  assign posts_displayed = section.settings.blog.articles_count
-  if section.settings.post_limit <= section.settings.blog.articles_count or section.settings.post_limit <= 4
+  assign posts_displayed = block.settings.blog.articles_count
+  if block.settings.post_limit <= block.settings.blog.articles_count or block.settings.post_limit <= 4
     assign posts_exceed_limit = true
-    assign posts_displayed = section.settings.post_limit
+    assign posts_displayed = block.settings.post_limit
   endif
 -%}
 <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <ul
-    id="Slider-{{ section.id }}"
-    class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+    id="Slider-{{ block.id }}"
+    class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ block.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
     role="list"
   >
-    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
-      {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
+    {%- if block.settings.blog != blank and block.settings.blog.articles_count > 0 -%}
+      {%- for article in block.settings.blog.articles limit: block.settings.post_limit -%}
         <li
           id="Slide-{{ section.id }}-{{ forloop.index }}"
           class="blog__post grid__item article slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -22,22 +22,22 @@
           {% endif %}
         >
           {% render 'article-card',
-            blog: section.settings.blog,
+            blog: block.settings.blog,
             article: article,
             media_aspect_ratio: 1.66,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
+            show_image: block.settings.show_image,
+            show_date: block.settings.show_date,
+            show_author: block.settings.show_author,
             show_excerpt: true
           %}
         </li>
       {%- endfor -%}
     {%- else -%}
-      {% for i in (1..section.settings.post_limit) -%}
+      {% for i in (1..block.settings.post_limit) -%}
         {%- assign placeholder_image_index = forloop.index0 | modulo: 3 | plus: 1 -%}
         {%- assign placeholder_image = 'blog-apparel-' | append: placeholder_image_index -%}
         <li
-          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          id="Slide-{{ block.id }}-{{ forloop.index }}"
           class="blog__post grid__item article slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
@@ -49,7 +49,7 @@
               class="
                 card article-card card--{{ settings.blog_card_style }}
                 {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
-                {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}
+                {% if block.settings.show_image %} card--media{% else %} card--text{% endif %}
               "
               style=" {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}"
             >
@@ -57,7 +57,7 @@
                 class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
                 style="--ratio-percent: 80%;"
               >
-                {%- if section.settings.show_image == true -%}
+                {%- if block.settings.show_image == true -%}
                   <div class="article-card__image-wrapper card__media">
                     <div class="article-card__image media">
                       {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}
@@ -126,6 +126,11 @@
   {
     "name": "Artical Box",
     "settings": [
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "t:sections.featured-blog.settings.blog.label"
+      },
       {
         "type": "range",
         "id": "post_limit",
