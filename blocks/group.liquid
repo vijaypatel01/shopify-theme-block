@@ -21,6 +21,7 @@
     {% endif %}
     border-width:{{ block.settings.border_width }}px;
     border-color:{{ block.settings.border-color }};
+    grid-template-column:repeat({{ block.settings.box_size }},1fr);
   }
   @media (max-width:576px){
     #shopify-block-{{ block.id }}{
