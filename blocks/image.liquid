@@ -4,7 +4,11 @@
     height:100%;
   }
 </style>
-<img src="{{ block.settings.image | image_url }}">
+{% if block.settings.image != blank %}
+  <img src="{{ block.settings.image | image_url }}">
+{% else %}
+  {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+{% endif %}
 {% schema %}
   {
     "name": "Image",
@@ -16,6 +20,7 @@
         "label": "Image"
       }
     ],
+    "blocks": [{"type": "@theme"},{"type": "@app"}],
     "presets": [
       {
         "name": "Image"
