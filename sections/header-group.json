@@ -111,7 +111,6 @@
                 },
                 "search_field_B9JJfm": {
                   "type": "search-field",
-                  "disabled": true,
                   "settings": {
                     "width": 100
                   }
@@ -119,7 +118,7 @@
                 "header_icon_i6G8eF": {
                   "type": "header-icon",
                   "settings": {
-                    "search-icon": true,
+                    "search-icon": false,
                     "profile-icon": true,
                     "cart-icon": true,
                     "width": 100,
