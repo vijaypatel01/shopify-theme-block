@@ -39,17 +39,51 @@
             "border": "all"
           },
           "blocks": {
-            "artical_box_wbJTw3": {
-              "type": "artical-box",
+            "group_MyqYLU": {
+              "type": "group",
               "settings": {
-                "blog": "news",
-                "post_limit": 3,
-                "columns_desktop": 3
-              }
+                "bg_color": "",
+                "box_size": 3,
+                "padding_top": 50,
+                "padding_bottom": 50,
+                "padding_left": 0,
+                "padding_right": 0,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "width": 100,
+                "display": "flex",
+                "justify-content": "space-between",
+                "align-items": "center",
+                "flex-direction": "row",
+                "gap": 0,
+                "border_width": 0,
+                "border-color": "",
+                "border": "all",
+                "mobile-flex-direction": "column",
+                "mobile-width": 100,
+                "mobile-padding_top": 0,
+                "mobile-padding_right": 0,
+                "mobile-padding_bottom": 0,
+                "mobile-padding_left": 0,
+                "mobile-margin_top": 0,
+                "mobile-margin_bottom": 0,
+                "mobile-gap": 0
+              },
+              "blocks": {
+                "article_ATixaE": {
+                  "type": "article",
+                  "settings": {
+                    "article": "news/hello-world"
+                  }
+                }
+              },
+              "block_order": [
+                "article_ATixaE"
+              ]
             }
           },
           "block_order": [
-            "artical_box_wbJTw3"
+            "group_MyqYLU"
           ]
         }
       },
