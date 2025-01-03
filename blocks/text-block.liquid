@@ -172,7 +172,31 @@
     "blocks": [{"type": "@theme"},{"type": "@app"}],
     "presets": [
       {
-        "name": "Text Block"
+        "name": "Text Block",
+        "settings": {
+          "width":"50%",
+          "padding_top":20,
+          "padding_right":20,
+          "padding_bottom":20,
+          "padding_left":20
+        },
+        "blocks": [
+          {
+            "type": "heading",
+            "settings": {
+              "margin_bottom":10
+            }
+          },
+          {
+            "type": "description",
+            "settings": {
+              "margin_bottom":10
+            }
+          },
+          {
+            "type": "button"
+          }
+        ]
       }
     ]
   }
