@@ -22,18 +22,16 @@
     >
       <div
         class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
-        style="--ratio-percent: 80%;"
+        style="--ratio-percent: 100%;"
       >
         
         {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}}
-        <div class="card__content">
             <h3 class="card__heading h2">
               {{ 'sections.featured_blog.onboarding_title' | t }}
             </h3>
             <p class="article-card__excerpt rte-width">
               {{ 'sections.featured_blog.onboarding_content' | t }}
             </p>
-        </div>
       </div>
     </div>
   </div>
