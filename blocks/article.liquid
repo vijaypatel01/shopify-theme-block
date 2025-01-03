@@ -1,12 +1,6 @@
 {% if block.settings.article != blank %}
   {% assign article = block.settings.article %}
   {%- if article and article != empty -%}
-  {%- liquid
-    assign ratio = 1
-    if media_aspect_ratio != null
-      assign ratio = media_aspect_ratio
-    endif
-  -%}
   <div class="article-card-wrapper card-wrapper underline-links-hover">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div
