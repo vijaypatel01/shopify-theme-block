@@ -37,6 +37,7 @@
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu",
@@ -202,7 +203,6 @@
         "container_XfLm6R",
         "container_phF6PV"
       ],
-      "disabled": true,
       "settings": {}
     }
   },
