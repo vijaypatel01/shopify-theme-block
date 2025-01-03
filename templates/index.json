@@ -75,10 +75,24 @@
                   "settings": {
                     "article": "news/hello-world"
                   }
+                },
+                "article_g7yNLj": {
+                  "type": "article",
+                  "settings": {
+                    "article": "news/hello-world"
+                  }
+                },
+                "article_6CLrEC": {
+                  "type": "article",
+                  "settings": {
+                    "article": "news/hello-world"
+                  }
                 }
               },
               "block_order": [
-                "article_ATixaE"
+                "article_ATixaE",
+                "article_g7yNLj",
+                "article_6CLrEC"
               ]
             }
           },
