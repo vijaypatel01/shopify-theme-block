@@ -22,62 +22,60 @@
           {% endif %}
         >
           <div class="article-card-wrapper card-wrapper underline-links-hover">
-    {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
-    <div
-      class="
-        card article-card
-        card--{{ settings.blog_card_style }}
-        {% if article.image %} card--media{% else %} card--text{% endif %}
-        {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
-        {% if settings.blog_card_style == 'card' %} ratio{% endif %}
-      "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-    >
-      <div
-        class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
-        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-      >
-        {%- if article.image -%}
-          <div class="article-card__image-wrapper card__media">
             <div
-              class="article-card__image media media--hover-effect"
-              {% if section.settings.media_height == 'adapt' %}
-                style="padding-bottom: 100%;"
-              {% endif %}
+              class="
+                card article-card
+                card--{{ settings.blog_card_style }}
+                {% if article.image %} card--media{% else %} card--text{% endif %}
+                {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
+                {% if settings.blog_card_style == 'card' %} ratio{% endif %}
+              "
+              style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
             >
-              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-              <img
-                srcset="
-                  {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {{ article.image.src | image_url }} {{ article.image.src.width }}w
-                "
-                src="{{ article.image.src | image_url: width: 533 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                alt="{{ article.image.src.alt | escape }}"
-                class="motion-reduce"
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
+              <div
+                class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
+                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
               >
+                {%- if article.image -%}
+                  <div class="article-card__image-wrapper card__media">
+                    <div
+                      class="article-card__image media media--hover-effect"
+                      {% if section.settings.media_height == 'adapt' %}
+                        style="padding-bottom: 100%;"
+                      {% endif %}
+                    >
+                      <img
+                        srcset="
+                          {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                          {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                          {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                          {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                          {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                          {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                          {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                        "
+                        src="{{ article.image.src | image_url: width: 533 }}"
+                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                        alt="{{ article.image.src.alt | escape }}"
+                        class="motion-reduce"
+                        width="{{ article.image.width }}"
+                        height="{{ article.image.height }}"
+                      >
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
+              <div class="card__content">
+                <div class="card__information">
+                  <h3 class="card__heading h2">
+                    <a href="{{ article.url }}" class="full-unstyled-link">
+                      {{ article.title | truncate: 50 | escape }}
+                    </a>
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
-        {%- endif -%}
-      </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading h2">
-            <a href="{{ article.url }}" class="full-unstyled-link">
-              {{ article.title | truncate: 50 | escape }}
-            </a>
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
         </li>
       {%- endfor -%}
     {%- else -%}
@@ -92,32 +90,32 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
-{%- assign placeholder_image_index = block.index0 | modulo: 3 | plus: 1 -%}
-  {%- assign placeholder_image = 'blog-apparel-' | append: placeholder_image_index -%}
-  <div class="article-card-wrapper card-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div
-      class="
-        card article-card card--{{ settings.blog_card_style }}
-        {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
-        {% if block.settings.show_image %} card--media{% else %} card--text{% endif %}
-      "
-      style=" {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}"
-    >
-      <div
-        class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
-        style="--ratio-percent: 100%;"
-      >
-        
-        {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}}
-      </div>
-      <h3 class="card__heading h2">
-        {{ 'sections.featured_blog.onboarding_title' | t }}
-      </h3>
-      <p class="article-card__excerpt rte-width">
-        {{ 'sections.featured_blog.onboarding_content' | t }}
-      </p>
-    </div>
-  </div>
+          {%- assign placeholder_image_index = block.index0 | modulo: 3 | plus: 1 -%}
+          {%- assign placeholder_image = 'blog-apparel-' | append: placeholder_image_index -%}
+          <div class="article-card-wrapper card-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <div
+              class="
+                card article-card card--{{ settings.blog_card_style }}
+                {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
+                {% if block.settings.show_image %} card--media{% else %} card--text{% endif %}
+              "
+              style=" {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}"
+            >
+              <div
+                class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
+                style="--ratio-percent: 100%;"
+              >
+                
+                {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}}
+              </div>
+              <h3 class="card__heading h2">
+                {{ 'sections.featured_blog.onboarding_title' | t }}
+              </h3>
+              <p class="article-card__excerpt rte-width">
+                {{ 'sections.featured_blog.onboarding_content' | t }}
+              </p>
+            </div>
+          </div>
         </li>
       {%- endfor -%}
     {%- endif -%}
