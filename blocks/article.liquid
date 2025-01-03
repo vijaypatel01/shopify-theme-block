@@ -1,12 +1,16 @@
-{% assign article = block.settings.article %}
-{% render 'article-card',
-  article: article,
-  media_aspect_ratio: 1.66,
-  show_image: section.settings.show_image,
-  show_date: section.settings.show_date,
-  show_author: section.settings.show_author,
-  show_excerpt: true
-%}
+{% if block.settings.article != blank %}
+  {% assign article = block.settings.article %}
+  {% render 'article-card',
+    article: article,
+    media_aspect_ratio: 1.66,
+    show_image: section.settings.show_image,
+    show_date: section.settings.show_date,
+    show_author: section.settings.show_author,
+    show_excerpt: true
+  %}
+{% else %}
+  {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}
+{% endif %}
 {% schema %}
   {
     "name": "Article",
