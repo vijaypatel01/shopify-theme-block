@@ -37,7 +37,20 @@
             "border_width": 0,
             "border-color": "",
             "border": "all"
-          }
+          },
+          "blocks": {
+            "artical_box_wbJTw3": {
+              "type": "artical-box",
+              "settings": {
+                "blog": "",
+                "post_limit": 3,
+                "columns_desktop": 3
+              }
+            }
+          },
+          "block_order": [
+            "artical_box_wbJTw3"
+          ]
         }
       },
       "block_order": [
