@@ -27,62 +27,93 @@
       ],
       "settings": {}
     },
-    "slideshow_exHPUV": {
-      "type": "slideshow",
+    "custom_section_c4TetJ": {
+      "type": "custom-section",
       "blocks": {
-        "slide_DTxVG9": {
-          "type": "slide",
+        "container_iR4D7W": {
+          "type": "container",
           "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_9rQgpc": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
+            "bg_color": "",
+            "border_width": 0,
+            "border-color": "",
+            "border": "all"
+          },
+          "blocks": {
+            "group_DBG3jK": {
+              "type": "group",
+              "settings": {
+                "bg_color": "",
+                "padding_top": 50,
+                "padding_bottom": 50,
+                "padding_left": 0,
+                "padding_right": 0,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "width": 100,
+                "display": "block",
+                "justify-content": "space-between",
+                "align-items": "normal",
+                "flex-direction": "row",
+                "gap": 0,
+                "border_width": 0,
+                "border-color": "",
+                "border": "all",
+                "mobile-flex-direction": "column",
+                "mobile-width": 100,
+                "mobile-padding_top": 0,
+                "mobile-padding_right": 0,
+                "mobile-padding_bottom": 0,
+                "mobile-padding_left": 0,
+                "mobile-margin_top": 0,
+                "mobile-margin_bottom": 0,
+                "mobile-gap": 0
+              },
+              "blocks": {
+                "heading_7wMpaQ": {
+                  "type": "heading",
+                  "settings": {
+                    "font-style": "montserrat_n5",
+                    "heading_size": "h2",
+                    "text": "Heading",
+                    "font_size": 36,
+                    "font_weight": "400",
+                    "line-height": "50.4",
+                    "color": "#000",
+                    "padding_top": 0,
+                    "padding_bottom": 0,
+                    "margin_top": 0,
+                    "margin_bottom": 0
+                  }
+                },
+                "video_ABmY89": {
+                  "type": "video",
+                  "settings": {
+                    "enable_video_looping": false,
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                    "description": "",
+                    "full_width": false
+                  }
+                }
+              },
+              "block_order": [
+                "heading_7wMpaQ",
+                "video_ABmY89"
+              ]
+            }
+          },
+          "block_order": [
+            "group_DBG3jK"
+          ]
         }
       },
       "block_order": [
-        "slide_DTxVG9",
-        "slide_9rQgpc"
+        "container_iR4D7W"
       ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
+      "settings": {}
     }
   },
   "order": [
     "custom_section_ABmf9a",
-    "slideshow_exHPUV"
+    "custom_section_c4TetJ"
   ]
 }
