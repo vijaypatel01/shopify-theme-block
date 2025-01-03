@@ -99,7 +99,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-
+svg{
+  width:100%;
+  height:100%;
+}
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
