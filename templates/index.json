@@ -27,10 +27,10 @@
       ],
       "settings": {}
     },
-    "custom_section_Ba4yX4": {
+    "custom_section_PBbPcF": {
       "type": "custom-section",
       "blocks": {
-        "container_4nLifL": {
+        "container_ByVNnK": {
           "type": "container",
           "settings": {
             "bg_color": "",
@@ -39,7 +39,7 @@
             "border": "all"
           },
           "blocks": {
-            "group_mQBKFq": {
+            "group_rC76dg": {
               "type": "group",
               "settings": {
                 "bg_color": "",
@@ -69,34 +69,34 @@
                 "mobile-gap": 0
               },
               "blocks": {
-                "image_block_dyC7wX": {
+                "image_block_afCxGU": {
                   "type": "image-block",
                   "settings": {
-                    "width": "",
+                    "width": "50%",
                     "height": "",
                     "mobile-width": 100,
                     "mobile-height": ""
                   },
                   "blocks": {
-                    "image_cTreqW": {
+                    "image_bWxjCt": {
                       "type": "image",
                       "settings": {}
                     }
                   },
                   "block_order": [
-                    "image_cTreqW"
+                    "image_bWxjCt"
                   ]
                 },
-                "text_block_NPAjkX": {
+                "text_block_nRKB9g": {
                   "type": "text-block",
                   "settings": {
-                    "width": "",
+                    "width": "50%",
                     "bg_color": "",
                     "border_radius": 0,
-                    "padding_top": 0,
-                    "padding_right": 0,
-                    "padding_bottom": 0,
-                    "padding_left": 0,
+                    "padding_top": 20,
+                    "padding_right": 20,
+                    "padding_bottom": 20,
+                    "padding_left": 20,
                     "margin_top": 0,
                     "margin_bottom": 0,
                     "mobile-width": "",
@@ -108,7 +108,7 @@
                     "mobile-margin_bottom": 0
                   },
                   "blocks": {
-                    "heading_pFNgdf": {
+                    "heading_6jKCcR": {
                       "type": "heading",
                       "settings": {
                         "font-style": "montserrat_n5",
@@ -124,7 +124,7 @@
                         "margin_bottom": 0
                       }
                     },
-                    "description_YNacU7": {
+                    "description_dMzCMW": {
                       "type": "description",
                       "settings": {
                         "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -143,7 +143,7 @@
                         "mobile-margin_bottom": 0
                       }
                     },
-                    "button_w3HnK4": {
+                    "button_dUeyHQ": {
                       "type": "button",
                       "settings": {
                         "button_title": "Button Label",
@@ -173,31 +173,31 @@
                     }
                   },
                   "block_order": [
-                    "heading_pFNgdf",
-                    "description_YNacU7",
-                    "button_w3HnK4"
+                    "heading_6jKCcR",
+                    "description_dMzCMW",
+                    "button_dUeyHQ"
                   ]
                 }
               },
               "block_order": [
-                "image_block_dyC7wX",
-                "text_block_NPAjkX"
+                "image_block_afCxGU",
+                "text_block_nRKB9g"
               ]
             }
           },
           "block_order": [
-            "group_mQBKFq"
+            "group_rC76dg"
           ]
         }
       },
       "block_order": [
-        "container_4nLifL"
+        "container_ByVNnK"
       ],
       "settings": {}
     }
   },
   "order": [
     "custom_section_ABmf9a",
-    "custom_section_Ba4yX4"
+    "custom_section_PBbPcF"
   ]
 }
