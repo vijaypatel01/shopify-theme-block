@@ -57,24 +57,10 @@
                   "settings": {
                     "article": "news/hello-world"
                   }
-                },
-                "article_g7yNLj": {
-                  "type": "article",
-                  "settings": {
-                    "article": "news/hello-world"
-                  }
-                },
-                "article_6CLrEC": {
-                  "type": "article",
-                  "settings": {
-                    "article": "news/hello-world"
-                  }
                 }
               },
               "block_order": [
-                "article_ATixaE",
-                "article_g7yNLj",
-                "article_6CLrEC"
+                "article_ATixaE"
               ]
             }
           },
@@ -179,7 +165,7 @@
                         "font_size": 36,
                         "font_weight": "400",
                         "line-height": "50.4",
-                        "color": "#000",
+                        "color": "#000000",
                         "padding_top": 0,
                         "padding_bottom": 0,
                         "margin_top": 0,
@@ -194,7 +180,7 @@
                         "font_size": 16,
                         "font_weight": "300",
                         "line-height": "19.5",
-                        "color": "#000",
+                        "color": "#000000",
                         "padding_top": 0,
                         "padding_bottom": 0,
                         "margin_top": 0,
@@ -214,9 +200,9 @@
                         "font_size": 14,
                         "font_weight": "500",
                         "line-height": "24",
-                        "color": "#000",
+                        "color": "#000000",
                         "bg_color": "",
-                        "hover_color": "#000",
+                        "hover_color": "#000000",
                         "hover_bg_color": "",
                         "border_radius": 0,
                         "border_width": 1,
