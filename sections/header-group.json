@@ -61,7 +61,7 @@
         "container_XfLm6R": {
           "type": "container",
           "settings": {
-            "bg_color": "linear-gradient(180deg, rgba(255, 145, 129, 1), rgba(254, 91, 124, 1) 49%, rgba(255, 140, 162, 1) 100%)",
+            "bg_color": "",
             "border_width": 0,
             "border-color": "",
             "border": "all"
@@ -144,7 +144,7 @@
         "container_phF6PV": {
           "type": "container",
           "settings": {
-            "bg_color": "linear-gradient(180deg, rgba(255, 145, 129, 1), rgba(254, 91, 124, 1) 49%, rgba(255, 140, 162, 1) 100%)",
+            "bg_color": "",
             "border_width": 0,
             "border-color": "",
             "border": "all"
