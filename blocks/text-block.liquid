@@ -5,6 +5,9 @@
     padding:{{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
     margin:{{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom}}px;
     width:{{ block.settings.width }};
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
   }
   @media (max-width:576px){
     #shopify-block-{{ block.id }}{
